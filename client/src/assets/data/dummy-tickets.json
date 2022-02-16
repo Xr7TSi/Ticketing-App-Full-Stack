@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "subject": "Test ticket 1 subject",
+        "status": "Test ticket 1 status",
+        "addedAt": "2018-01-01",
+        "history": [
+            {
+               "date": "2018-01-01",
+                "message": "This is test ticket 1, message 1.",
+                "messageBy": "Client"
+            },
+            {
+                "date": "2018-01-01",
+                 "message": "This is test ticket 1, message 2.",
+                 "messageBy": "Operator"
+             },
+             {
+                "date": "2018-01-01",
+                 "message": "This is test ticket 1, message 3.",
+                 "messageBy": "Client"
+             }
+        ]
+    },
+    {
+        "id": 2,
+        "subject": "Test ticket 2 subject",
+        "status": "Test ticket 2 status",
+        "addedAt": "2018-01-01",
+        "history": [
+            {
+                "date": "2018-01-01",
+                 "message": "This is test ticket 2, message 1.",
+                 "messageBy": "Client"
+             },
+             {
+                 "date": "2018-01-01",
+                  "message": "This is test ticket 2, message 2.",
+                  "messageBy": "Operator"
+              },
+              {
+                 "date": "2018-01-01",
+                  "message": "This is test ticket 2, message 3.",
+                  "messageBy": "Client"
+              }
+        ]
+    },
+    {
+        "id": 3,
+        "subject": "Test ticket 3 subject",
+        "status": "Test ticket 3 status",
+        "addedAt": "2018-01-01",
+        "history": [
+            {
+                "date": "2018-01-01",
+                 "message": "This is test ticket 3, message 1.",
+                 "messageBy": "Client"
+             },
+             {
+                 "date": "2018-01-01",
+                  "message": "This is test ticket 3, message 2.",
+                  "messageBy": "Operator"
+              },
+              {
+                 "date": "2018-01-01",
+                  "message": "This is test ticket 3, message 3.",
+                  "messageBy": "Client"
+              }
+        ]
+    }
+ 
+]

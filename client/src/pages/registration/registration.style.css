@@ -1,0 +1,12 @@
+.registration-page {
+    /* 100vh = 100% View Height */
+    height: 100vh;
+    /* needed for justify and align css properties to work */
+    display: flex;
+     /* centers text horizontally */
+    justify-content: center;
+    /* centers text vertically */
+    align-items: center;
+    
+};
+

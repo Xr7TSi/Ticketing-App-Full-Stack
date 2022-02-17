@@ -99,7 +99,7 @@ router.post("/", async (req, res) => {
 
     await newUserConfirmation(result.email, verificationURL + result._id + '/' + result.email),
 
-      res.json({ status: "success", message: "New user created", result });
+      res.json({ status: "success", message: "New account created.  Please check your email to verify your new account.", result });
 
   } catch (error) {
     let message =

@@ -1,5 +1,5 @@
 const redis = require("redis");
-const client = redis.createClient("redis://localhost:6379");
+const client = redis.createClient(process.env.REDIS_URL);
 
 client.on("connect", () => {
   console.log("Redis client is connected");
@@ -12,6 +12,7 @@ client.on("error", (error) => {
 const setJWT = (key, value) => {
   try {
     client.set(key, value);
+    console.log(key, value);
   } catch (error) {
     console.log("setJWT error " + error);
   }

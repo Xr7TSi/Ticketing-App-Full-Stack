@@ -138,13 +138,12 @@ router.get("/", userAuthorization, async (req, res) => {
 // get ticket by ticket id (from request parameter) and user id (from request header)
 // this is the V1/ticket/:ticketId route
 router.get("/:_Id", userAuthorization, async (req, res) => {
+  
   try {
     // _id is an individual ticket id in mongodb
-    // req.userId is a property of the request header
     const _id = req.params._Id;
-    const clientId = req.userId;
 
-    const result = await getTicketById(_id, clientId);
+    const result = await getTicketById(_id);
 
     return res.json({ status: "success", result });
   } catch (error) {
@@ -158,11 +157,8 @@ router.put("/:_Id", userAuthorization, async (req, res) => {
   try {
     // _id is an individual ticket id in mongodb
     const _id = req.params._Id;
-    const clientId = req.userId;
     const { message, sender } = req.body;
-
-    // the clientId parameter ensure only the client can make this change
-    const result = await addClientMessage(_id, message, sender, clientId);
+    const result = await addClientMessage(_id, message, sender);
 
     if (result._id) {
       return res.json({

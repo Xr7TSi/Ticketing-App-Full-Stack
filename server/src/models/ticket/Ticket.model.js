@@ -73,10 +73,11 @@ const getTicketsByUserId = (clientId) => {
   });
 };
 
-const getTicketById = (_id, clientId) => {
+
+const getTicketById = (_id) => {
   return new Promise((resolve, reject) => {
     try {
-      TicketSchema.findOne({ _id, clientId })
+      TicketSchema.findOne({ _id })
         .then((data) => resolve(data))
         .catch((error) => reject("Error at TicketSchema.find / " + error));
     } catch (error) {
@@ -85,11 +86,12 @@ const getTicketById = (_id, clientId) => {
   });
 };
 
-const addClientMessage = (_id, message, sender, clientId) => {
+
+const addClientMessage = (_id, message, sender) => {
   return new Promise((resolve, reject) => {
     try {
       TicketSchema.findOneAndUpdate(
-        { _id, clientId },
+        { _id },
         {
           status: "open",
           $push: {

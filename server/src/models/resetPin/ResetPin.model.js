@@ -1,4 +1,4 @@
-const { ResetPinSchema } = require("./resetPin.schema");
+const { ResetPinSchema } = require("./ResetPin.schema");
 
 const setPasswordResetPin = (email) => {
   // randomPin range starts at 100000 to avoid having numbers with less than 6 digits

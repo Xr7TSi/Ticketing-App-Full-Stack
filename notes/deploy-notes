@@ -1,5 +1,10 @@
 Deploy process for AWS ECT using NGINX, Certbot and Forever:
 
+- Redis may need to be started manually: 
+    start Redis: sudo redis-server
+    stop Redis: sudo service redis-server stop
+    check status: sudo systemctl status redis
+
 1. Create EC2 instance, install node.js, use git to clone application code, install nginx
     instructions: https://betterprogramming.pub/deploy-mern-stack-app-on-aws-ec2-with-letsencrypt-ssl-8f463c01502a
 
@@ -30,6 +35,11 @@ Deploy process for AWS ECT using NGINX, Certbot and Forever:
     *Forever is a Node.js module that can be used to run Node.js applications on a schedule.  In this case,  it is used to keep the server running after the connection to the server is dropped.
     *Forever has been added to the Ubuntu instance. 
 
+    Stop Forever:
+    
+        Check which Forecer processes are running:   sudo forever list
+        Stop the process:  sudo forever stop 0  (where 0 is the first process)
+ 
     Note:  If you're getting an erro that port 5000 is in use after making chages, here's the command to manuall shut don the port:
     sudo fuser -k 5000/tcp
 

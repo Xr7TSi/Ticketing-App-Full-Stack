@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const rootURL = "https://jonathanrein.com/v1/";
+const rootURL = "/v1/";
 const loginURL = rootURL + "user/login";
 const userProfileURL = rootURL + "user";
 const logoutURL = rootURL + "user/logout";

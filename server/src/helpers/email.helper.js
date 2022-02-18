@@ -4,14 +4,24 @@ const nodemailer = require("nodemailer");
 
 // create reusable transporter object using the default SMTP transport
 // TTo Do: use .env for host, port, user, pass for security
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.ethereal.email",
+//   port: 587,
+//   auth: {
+//     user: "susana.stanton63@ethereal.email",
+//     pass: "3GJsJ8zXNuNTUZYRgX",
+//   },
+// });
+
 const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
+  service: "gmail",
   auth: {
-    user: "susana.stanton63@ethereal.email",
-    pass: "3GJsJ8zXNuNTUZYRgX",
+    user: process.env.EMAIL_LOGIN,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
+
+
 
 const send = (info) => {
   return new Promise(async (resolve, reject) => {
@@ -58,7 +68,6 @@ const notifyPasswordReset = (email) => {
   };
   send(info);
 };
-
 
 // reminder: make verificationURL function as a link
 // reminder: test that user is getting email

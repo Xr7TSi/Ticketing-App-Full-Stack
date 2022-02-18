@@ -1,5 +1,4 @@
-/sandbox
-/notes
+/sanbox
 
 
 #clear git cache = git rm -rf --cached .

@@ -111,11 +111,32 @@ const addClientMessage = (_id, message, sender) => {
   });
 };
 
-const updateStatusClosed = (_id, clientId) => {
+// const updateStatusClosed = (_id, clientId) => {
+//   return new Promise((resolve, reject) => {
+//     try {
+//       TicketSchema.findOneAndUpdate(
+//         { _id, clientId },
+//         {
+//           status: "closed",
+//         },
+//         { new: true }
+//       )
+
+//         .then((data) => resolve(data))
+//         .catch((error) =>
+//           reject("Error at TicketSchema.findOneAndUpdate / " + error)
+//         );
+//     } catch (error) {
+//       console.log("Error at updateStatusClosed / " + error);
+//     }
+//   });
+// };
+
+const updateStatusClosed = (_id) => {
   return new Promise((resolve, reject) => {
     try {
       TicketSchema.findOneAndUpdate(
-        { _id, clientId },
+        { _id },
         {
           status: "closed",
         },
@@ -131,6 +152,8 @@ const updateStatusClosed = (_id, clientId) => {
     }
   });
 };
+
+
 
 const deleteTicket = (_id, clientId) => {
   return new Promise((resolve, reject) => {

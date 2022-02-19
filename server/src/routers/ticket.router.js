@@ -173,6 +173,36 @@ router.put("/:_Id", userAuthorization, async (req, res) => {
 });
 
 // update ticket status to "closed"
+// this function only allows ticket to be closed by its creator
+// this is the V1/ticket/close-ticket/:ticketId route
+// router.patch("/close-ticket/:_Id", userAuthorization, async (req, res) => {
+//   try {
+//     // _id is an individual ticket id in mongodb
+
+//     const _id = req.params._Id;
+
+//     const clientId = req.userId;
+
+//     // the clientId parameter ensure only the client can make this change
+//     const result = await updateStatusClosed(_id, clientId);
+
+//     if (result._id) {
+//       return res.json({
+//         status: "success",
+//         message: "Ticket status is now closed.",
+//       });
+//     }
+//     res.json({
+//       status: "error",
+//       message: "Ticket status has not been updated.",
+//     });
+//   } catch (error) {
+//     console.log("Error at router.patch /close-ticket/:_Id " + error);
+//   }
+// });
+
+// update ticket status to "closed"
+// this function only allows ticket to be closed by anyone with authorization
 // this is the V1/ticket/close-ticket/:ticketId route
 router.patch("/close-ticket/:_Id", userAuthorization, async (req, res) => {
   try {
@@ -180,10 +210,8 @@ router.patch("/close-ticket/:_Id", userAuthorization, async (req, res) => {
 
     const _id = req.params._Id;
 
-    const clientId = req.userId;
-
     // the clientId parameter ensure only the client can make this change
-    const result = await updateStatusClosed(_id, clientId);
+    const result = await updateStatusClosed(_id);
 
     if (result._id) {
       return res.json({
@@ -199,6 +227,7 @@ router.patch("/close-ticket/:_Id", userAuthorization, async (req, res) => {
     console.log("Error at router.patch /close-ticket/:_Id " + error);
   }
 });
+
 
 
 

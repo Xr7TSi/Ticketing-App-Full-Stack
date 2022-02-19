@@ -1,7 +1,7 @@
 /node_modules
 /notes
 test-data.json
-.env
+
 
 
 #clear git cache = git rm -rf --cached .

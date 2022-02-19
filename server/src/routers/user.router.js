@@ -175,7 +175,8 @@ router.post("/reset-password", async (req, res) => {
 
     return res.json({
       status: "success",
-      message: "Password reset email sent",
+      // message: "Password reset email sent",
+      message: "Check your email for a password reset pin",
     });
   }
   res.json({ status: "error", message: "Email not found" });

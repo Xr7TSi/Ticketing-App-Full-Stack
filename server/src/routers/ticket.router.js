@@ -200,6 +200,8 @@ router.patch("/close-ticket/:_Id", userAuthorization, async (req, res) => {
   }
 });
 
+
+
 // delete a ticket by id
 // this is the V1/ticket/:ticketId route
 router.delete("/:_Id", userAuthorization, async (req, res) => {

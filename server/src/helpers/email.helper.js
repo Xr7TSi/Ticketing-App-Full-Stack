@@ -44,7 +44,7 @@ const send = (info) => {
 
 const notifyPinEmail = (email, pin) => {
   const info = {
-    from: '"CMR Company" <susana.stanton63@ethereal.email>', // sender address
+    from: '"Ticketing App" <jrein1296@gmail.com>', // sender address
     to: email,
     subject: "Password reset PIN ", // Subject line
     text:
@@ -59,12 +59,12 @@ const notifyPinEmail = (email, pin) => {
 
 const notifyPasswordReset = (email) => {
   const info = {
-    from: '"CMR Company" <susana.stanton63@ethereal.email>', // sender address
+    from: '"Ticketing App" <jrein1296@gmail.com>', // sender address
     to: email,
-    subject: "Password updates ", // Subject line
-    text: "Your password has been updated.",
+    subject: "Password Changed ", // Subject line
+    text: "Your password has been changed.",
 
-    html: `<h2>Your password has been updated.</h2>`,
+    html: `<h2>Your password has been changed.</h2>`,
   };
   send(info);
 };
@@ -73,13 +73,15 @@ const notifyPasswordReset = (email) => {
 // reminder: test that user is getting email
 const newUserConfirmation = (email, verificationURL) => {
   const info = {
-    from: '"CMR Company" <susana.stanton63@ethereal.email>', // sender address
+    from: '"Ticketing App" <jrein1296@gmail.com>', // sender address
     to: email,
     subject: "New User Confirmation ", // Subject line
-    text: "Follow the link to verify your account.",
+    text: "Follow the link to verify your account." + verificationURL,
 
-    html: `<h2>Follow the link to verify your account.</h2>
-    <a href="${verificationURL}">Verification Link</a>`,
+    html: `
+    <h2>Follow the link to verify your account.</h2>
+    <a href="${verificationURL}">Verification Link</a>
+    `,
 
   };
   send(info);

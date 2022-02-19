@@ -35,6 +35,19 @@ export const fetchAllTickets = () => async (dispatch) => {
   }
 };
 
+// export const fetchAllOpenTickets = () => async (dispatch) => {
+//   dispatch(fetchTicketLoading());
+
+//   try {
+//     const result = await getAllOpenTickets();
+
+//     // if there are tickets, dispatch 
+//     result.data.result.length && dispatch(fetchTicketSuccess(result.data.result));
+//   } catch (error) {
+//     dispatch(fetchTicketFailure("Error at fetchAllOpenTickets / " + error.message));
+//   }
+// };
+
 export const fetchAllOpenTickets = () => async (dispatch) => {
   dispatch(fetchTicketLoading());
 
@@ -44,9 +57,22 @@ export const fetchAllOpenTickets = () => async (dispatch) => {
     // if there are tickets, dispatch 
     result.data.result.length && dispatch(fetchTicketSuccess(result.data.result));
   } catch (error) {
-    dispatch(fetchTicketFailure("Error at fetchAllOpenTickets / " + error.message));
+    dispatch(fetchTicketFailure("There are no open tickets at the moment."));
   }
 };
+
+// export const fetchAllClosedTickets = () => async (dispatch) => {
+//   dispatch(fetchTicketLoading());
+
+//   try {
+//     const result = await getAllClosedTickets();
+
+//     // if there are tickets, dispatch 
+//     result.data.result.length && dispatch(fetchTicketSuccess(result.data.result));
+//   } catch (error) {
+//     dispatch(fetchTicketFailure("Error at fetchAllClosedTickets / " + error.message));
+//   }
+// };
 
 export const fetchAllClosedTickets = () => async (dispatch) => {
   dispatch(fetchTicketLoading());
@@ -57,9 +83,13 @@ export const fetchAllClosedTickets = () => async (dispatch) => {
     // if there are tickets, dispatch 
     result.data.result.length && dispatch(fetchTicketSuccess(result.data.result));
   } catch (error) {
-    dispatch(fetchTicketFailure("Error at fetchAllClosedTickets / " + error.message));
+    dispatch(fetchTicketFailure("There are no closed tickets at the moment."));
   }
 };
+
+
+
+
 
 export const filterSearchedTickets = (str) => (dispatch) => {
   dispatch(searchTickets(str));

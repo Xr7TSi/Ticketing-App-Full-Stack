@@ -10,7 +10,7 @@ export const TicketTable = () => {
 
   if (isLoading) return <h3>Loading...</h3>;
 
-  if (error) return <h3>Error: {error}</h3>;
+  if (error) return <h3>{error}</h3>;
 
   return (
     <Table striped bordered hover>
@@ -50,3 +50,13 @@ export const TicketTable = () => {
     </Table>
   );
 };
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,7 @@ export const Dashboard = () => {
   const { tickets } = useSelector((state) => state.tickets);
   console.log(tickets);
   const totalTickets = tickets.length;
+  const openTickets = tickets.filter((ticket) => ticket.status === "open");
 
   // if no tickets are present in state, fetch them
   useEffect(() => {
@@ -47,8 +48,11 @@ export const Dashboard = () => {
 
         <Row>
           <Col className="text-center mb-2">
+            <h4>
+            <div>Open Tickets: {openTickets.length}</div>
+            </h4>
+            
             <div>Total Tickets: {totalTickets}</div>
-            <div>Open Tickets: {tickets.length}</div>
           </Col>
         </Row>
 

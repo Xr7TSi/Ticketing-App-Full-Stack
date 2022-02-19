@@ -1,7 +1,13 @@
 Deploy process for AWS ECT using NGINX, Certbot and Forever:
 
+
+Important notes:
+
 - Redis may need to be started manually.  This command causes redis to persist after connecti is dropped: 
     -start Redis as a server: sudo systemctl start redis
+
+- process.env variables may need to be set manually.  These include server/index.js and server/src/helpers/email.helper.js.
+
 
 
 1. Create EC2 instance, install node.js, use git to clone application code, install nginx
@@ -39,7 +45,7 @@ Deploy process for AWS ECT using NGINX, Certbot and Forever:
         Check which Forecer processes are running:   sudo forever list
         Stop the process:  sudo forever stop 0  (where 0 is the first process)
  
-    Note:  If you're getting an erro that port 5000 is in use after making chages, here's the command to manuall shut don the port:
+    Note:  If you're getting an erro that port 5000 is in use after making chages, here's the command to manuall shut down the port:
     sudo fuser -k 5000/tcp
 
 

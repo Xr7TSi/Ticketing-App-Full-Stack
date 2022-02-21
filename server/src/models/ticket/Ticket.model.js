@@ -13,10 +13,25 @@ const insertTicket = (newTicketObj) => {
   });
 };
 
+// Get all tickets in order of oldest to newest
+// const getAllTickets = () => {
+//   return new Promise((resolve, reject) => {
+//     try {
+//       TicketSchema.find()
+//         .then((data) => resolve(data))
+//         .catch((error) => reject("Error at TicketSchema.find / " + error));
+//     } catch (error) {
+//       console.log("Error at getAllTickets / " + error);
+//     }
+//   });
+// };
+
+
+// Get all tickets in order of newest to oldest
 const getAllTickets = () => {
   return new Promise((resolve, reject) => {
     try {
-      TicketSchema.find()
+      TicketSchema.find().sort({ openedAt: -1 })
         .then((data) => resolve(data))
         .catch((error) => reject("Error at TicketSchema.find / " + error));
     } catch (error) {

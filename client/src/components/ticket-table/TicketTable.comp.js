@@ -19,7 +19,7 @@ export const TicketTable = () => {
         {/* <tr>defines a row of cells in the table */}
         <tr>
           {/* <th> defines the header cells in the table */}
-          <th>#</th>
+          <th>Ticket ID</th>
           <th>Subject</th>
           <th>Status</th>
           <th>Opened Date</th>

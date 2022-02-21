@@ -52,10 +52,11 @@ const getAllOpenTickets = () => {
   });
 };
 
+// Get all tickets in order of newest to oldest
 const getAllClosedTickets = () => {
   return new Promise((resolve, reject) => {
     try {
-      TicketSchema.find({ status : "closed" })
+      TicketSchema.find({ status : "closed" }).sort({ openedAt: -1 })
         .then((data) => resolve(data))
         .catch((error) => reject("Error at TicketSchema.find / " + error));
     } catch (error) {

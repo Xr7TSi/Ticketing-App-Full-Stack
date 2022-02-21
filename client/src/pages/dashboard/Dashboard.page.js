@@ -13,6 +13,7 @@ export const Dashboard = () => {
   const totalTickets = tickets.length;
   const openTickets = tickets.filter((ticket) => ticket.status === "open");
   
+  
 
   // if no tickets are present in state, fetch them
   useEffect(() => {

@@ -87,7 +87,7 @@ const UpdatePasswordForm = () => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info"></h1>
+          <h1 className="text-info">Update Password</h1>
         </Col>
       </Row>
       <hr />

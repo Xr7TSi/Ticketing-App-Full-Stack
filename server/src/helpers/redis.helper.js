@@ -14,7 +14,6 @@ client.on("error", (error) => {
 const setJWT = (key, value) => {
   try {
     client.set(key, value);
-    console.log(key, value);
   } catch (error) {
     console.log("setJWT error " + error);
   }

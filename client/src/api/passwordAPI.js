@@ -8,7 +8,6 @@ export const reqPasswordOtp = (email) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.post(otpRequestURL, { email });
-      console.log(data);
       resolve(data);
     } catch (error) {
       reject(error);
@@ -21,7 +20,6 @@ export const updateUserPassword = passwordObj => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.patch(otpRequestURL, passwordObj);
-      console.log(data);
       resolve(data);
     } catch (error) {
       reject(error);

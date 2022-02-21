@@ -10,9 +10,9 @@ import DefaultLayout from "../../components/layout/DefaultLayout";
 export const Dashboard = () => {
   const dispatch = useDispatch();
   const { tickets } = useSelector((state) => state.tickets);
-  console.log(tickets);
   const totalTickets = tickets.length;
   const openTickets = tickets.filter((ticket) => ticket.status === "open");
+  
 
   // if no tickets are present in state, fetch them
   useEffect(() => {

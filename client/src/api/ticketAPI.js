@@ -104,7 +104,6 @@ export const updateTicketStatusClosed = (_id) => {
 };
 
 export const createNewTicket = (formData) => {
-  console.log("Form Data from API ", formData);
   return new Promise(async (resolve, reject) => {
     try {
       const result = await axios.post(ticketURL, formData, {

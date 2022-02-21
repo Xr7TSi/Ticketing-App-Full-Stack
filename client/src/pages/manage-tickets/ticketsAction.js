@@ -111,7 +111,6 @@ export const replyToTicket = (_id, msgObj) => async (dispatch) => {
 
   try {
     const result = await addReplyToTicket(_id, msgObj);
-    console.log(result);
     if(result.status === "error"){
       return dispatch(replyTicketFailure("Error at replyToTicket / " + result.message));
     }
@@ -127,7 +126,6 @@ export const closeTicket = (_id) => async (dispatch) => {
 
   try {
     const result = await updateTicketStatusClosed(_id);
-    console.log(result);
     if(result.status === "error"){
       return dispatch(closeTicketFailure("Error at updateTicketStatusClosed / " + result.message));
     }

@@ -2,9 +2,12 @@ const jwt = require("jsonwebtoken");
 const { setJWT } = require("./redis.helper");
 const { storeUserRefreshJWT } = require("../models/user/User.model");
 
+const accessSecret = process.env.JWT_ACCESS_SECRET
+const refreshSecret = process.env.JWT_REFRESH_SECRET
+
 const createAccessJWT = async (email, _id) => {
   try {
-    const accessJWT = jwt.sign({ email }, process.env.JWT_ACCESS_SECRET, {
+    const accessJWT = jwt.sign({ email }, accessSecret, {
       expiresIn: "30d",
     });
 
@@ -18,7 +21,7 @@ const createAccessJWT = async (email, _id) => {
 
 const createRefreshJWT = async (email, _id) => {
   try {
-    const refreshJWT = jwt.sign({ email }, process.env.JWT_REFRESH_SECRET, {
+    const refreshJWT = jwt.sign({ email }, refreshSecret, {
       expiresIn: "30d",
     });
 
@@ -33,7 +36,7 @@ const createRefreshJWT = async (email, _id) => {
 // used in authorization middleware
 const verifyAccessJWT = (userJWT) => {
   try {
-    return Promise.resolve(jwt.verify(userJWT, process.env.JWT_ACCESS_SECRET));
+    return Promise.resolve(jwt.verify(userJWT, accessSecret));
   } catch (error) {
     return Promise.resolve(error);
   }
@@ -41,7 +44,7 @@ const verifyAccessJWT = (userJWT) => {
 
 const verifyRefreshJWT = (userJWT) => {
   try {
-    return Promise.resolve(jwt.verify(userJWT, process.env.JWT_REFRESH_SECRET));
+    return Promise.resolve(jwt.verify(userJWT, refreshSecret));
   } catch (error) {
     return Promise.resolve(error);
   }
@@ -53,6 +56,7 @@ module.exports = {
   verifyAccessJWT,
   verifyRefreshJWT,
 };
+
 
 
 

@@ -58,7 +58,9 @@ export const Dashboard = () => {
         </Row>
 
         <Row>
-          <Col className="mt-2">Recently Added Tickets</Col>
+          <Col className="mt-2">
+            <h5>Recently Added Tickets</h5>
+          </Col>
         </Row>
         <hr />
 

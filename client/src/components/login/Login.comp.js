@@ -70,7 +70,7 @@ export const LoginForm = ({ formSwitcher }) => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info">Client Login</h1>
+          <h1 className="text-info">Login</h1>
           {/* hr/ creates horizontal line */}
           <hr />
           {error && <Alert variant="danger">{error}</Alert>}

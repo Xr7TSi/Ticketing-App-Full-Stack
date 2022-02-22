@@ -37,7 +37,7 @@ export const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav>
-          <Link to="/dashboard" style={styles.linkStyle}>
+          <Link to="/dashboard" style={styles.linkStyle} onClick="window.location.reload">
             Dashboard
           </Link>
 

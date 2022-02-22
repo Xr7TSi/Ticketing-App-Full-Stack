@@ -19,10 +19,10 @@ export const TicketTable = () => {
         {/* <tr>defines a row of cells in the table */}
         <tr>
           {/* <th> defines the header cells in the table */}
-          <th>Ticket ID</th>
           <th>Subject</th>
           <th>Status</th>
           <th>Opened Date</th>
+          <th>Ticket ID</th>
         </tr>
       </thead>
       <tbody>
@@ -30,13 +30,13 @@ export const TicketTable = () => {
         {tickets.length ? (
           searchTicketList.map((row) => (
             <tr key={row._id}>
-              <td>{row._id}</td>
-              <td>
+               <td>
                 {/* the link below adds the selected ticket's id as a parameter to the /tickets:tId route */}
                 <Link to={`/ticket/${row._id}`}>{row.subject}</Link>
               </td>
               <td>{row.status}</td>
               <td>{row.openedAt && new Date(row.openedAt).toLocaleString()}</td>
+              <td>{row._id}</td>
             </tr>
           ))
         ) : (

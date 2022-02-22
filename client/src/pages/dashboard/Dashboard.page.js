@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
+import { DashboardTable } from "../../components/dashboard-table/DashboardTable.comp";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { fetchAllTickets } from "../manage-tickets/ticketsAction";
 import DefaultLayout from "../../components/layout/DefaultLayout";
@@ -12,6 +12,7 @@ export const Dashboard = () => {
   const { tickets } = useSelector((state) => state.tickets);
   const totalTickets = tickets.length;
   const openTickets = tickets.filter((ticket) => ticket.status === "open");
+  
   
   
 
@@ -66,7 +67,8 @@ export const Dashboard = () => {
 
         <Row>
           <Col className="recent-ticket">
-            <TicketTable tickets={tickets} />
+            <DashboardTable tickets={tickets} />
+  
           </Col>
         </Row>
       </Container>

@@ -23,6 +23,7 @@ export const getAllTickets = () => {
   });
 };
 
+
 export const getAllOpenTickets = () => {
   return new Promise(async (resolve, reject) => {
     try {

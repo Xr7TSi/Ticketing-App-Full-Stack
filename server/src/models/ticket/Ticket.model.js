@@ -40,6 +40,8 @@ const getAllTickets = () => {
   });
 };
 
+
+
 const getAllOpenTickets = () => {
   return new Promise((resolve, reject) => {
     try {
@@ -168,7 +170,6 @@ const updateStatusClosed = (_id) => {
     }
   });
 };
-
 
 
 const deleteTicket = (_id, clientId) => {

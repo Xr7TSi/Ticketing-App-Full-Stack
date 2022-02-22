@@ -3,6 +3,7 @@ const router = express.Router();
 const {
   insertTicket,
   getAllTickets,
+  getFiveNewestTickets,
   getAllOpenTickets,
   getAllClosedTickets,
   getTicketsByStatus,
@@ -49,7 +50,7 @@ router.post("/", userAuthorization, async (req, res) => {
 });
 
 // get all tickets 
-// this is the V1/ticket/allTickets route
+// this is the V1/ticket/all-tickets route
 router.get("/all-tickets", userAuthorization, async (req, res) => {
   try {
     const result = await getAllTickets();
@@ -59,6 +60,7 @@ router.get("/all-tickets", userAuthorization, async (req, res) => {
     console.log("Error at router.get / " + error);
   }
 });
+
 
 // get all open tickets 
 // this is the V1/ticket/all-open-tickets route
@@ -78,6 +80,7 @@ router.get("/all-open-tickets", userAuthorization, async (req, res) => {
     console.log("Error at router.get / " + error);
   }
 });
+
 
 // get all closed tickets 
 // this is the V1/ticket/all-closed-tickets route

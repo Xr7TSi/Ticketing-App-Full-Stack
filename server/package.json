@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Xr7TSi/crm-client-api#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "dotenv": "^14.3.0",

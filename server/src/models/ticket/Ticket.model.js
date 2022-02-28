@@ -31,6 +31,7 @@ const insertTicket = (newTicketObj) => {
 const getAllTickets = () => {
   return new Promise((resolve, reject) => {
     try {
+      // opened at -1 orders returned data in descending order (openedAt newest to oldest)
       TicketSchema.find().sort({ openedAt: -1 })
         .then((data) => resolve(data))
         .catch((error) => reject("Error at TicketSchema.find / " + error));

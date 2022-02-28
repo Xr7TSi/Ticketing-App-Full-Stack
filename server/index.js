@@ -1,10 +1,17 @@
 require("dotenv").config();
 
+// Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications
 const express = require("express");
 const app = express();
+
+// Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box
 const mongoose = require("mongoose");
 const cors = require("cors");
+
+// Helmet helps you secure your Express apps by setting various HTTP headers
 const helmet = require("helmet");
+
+// morgan logs api calls to the terminal
 const morgan = require("morgan");
 
 
@@ -70,6 +77,6 @@ if (process.env.NODE_ENV !== "production") {
     console.log("MongoDB error", error);
   });
 
-  // morgan logs api calls to the terminal
+  
   app.use(morgan("tiny"));
 }

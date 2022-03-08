@@ -23,6 +23,7 @@ export const Dashboard = () => {
     }
   }, [tickets, dispatch]);
 
+
   return (
     <DefaultLayout>
       <Container>

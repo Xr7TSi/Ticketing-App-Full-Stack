@@ -1,0 +1,3 @@
+jonathanrein.com/www.jonathanrein.com are routed to an elastic ip of XXXXXX.
+
+The elastic IP is tied to the project instance and remains constant after instance reboots.

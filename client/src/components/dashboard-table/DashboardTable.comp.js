@@ -8,6 +8,7 @@ export const DashboardTable = () => {
     (state) => state.tickets
   );
 
+  // start at index 0, return 5 tickets
   const firstFiveTickets = searchTicketList.slice(0, 5);
 
   if (isLoading) return <h3>Loading...</h3>;

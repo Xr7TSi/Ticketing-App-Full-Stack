@@ -26,6 +26,7 @@ export const DashboardTable = () => {
           <th>Status</th>
           <th>Opened Date</th>
           <th>Ticket ID</th>
+          <th>Opened By</th>
         </tr>
       </thead>
       <tbody>
@@ -40,6 +41,7 @@ export const DashboardTable = () => {
               <td>{row.status}</td>
               <td>{row.openedAt && new Date(row.openedAt).toLocaleString()}</td>
               <td>{row._id}</td>
+              <td>{row.conversations[0].sender}</td>
             </tr>
           ))
         ) : (

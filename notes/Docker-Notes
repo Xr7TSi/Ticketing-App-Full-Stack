@@ -28,6 +28,10 @@ docker volume rm {volume id} : remove volume
 
 docker volume prune : remove unused volumes
 
+docker system prune -a : remove all unused images and volumes
+
+
+
 
 
 

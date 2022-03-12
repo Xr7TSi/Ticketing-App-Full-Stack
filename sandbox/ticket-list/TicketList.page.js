@@ -4,7 +4,7 @@ import { fetchAllTickets } from "./ticketsAction";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
-import { SearchForm } from "../../components/search-form/SearchForm.comp";
+import { SearchBySubjectForm } from "../../components/search-form/SearchBySubjectForm.comp";
 import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 
@@ -33,7 +33,7 @@ export const TicketList = () => {
             </Link>
           </Col>
           <Col className="text-right">
-            <SearchForm />
+            <SearchBySubjectForm />
           </Col>
         </Row>
         <hr />

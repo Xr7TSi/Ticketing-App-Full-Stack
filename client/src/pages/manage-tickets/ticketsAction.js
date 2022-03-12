@@ -3,6 +3,8 @@ import {
   fetchTicketSuccess,
   fetchTicketFailure,
   searchTicketsBySubject,
+  searchTicketsByOwner,
+  searchTicketsById,
   fetchSingleTicketLoading,
   fetchSingleTicketSuccess,
   fetchSingleTicketFailure,
@@ -90,6 +92,14 @@ export const fetchAllClosedTickets = () => async (dispatch) => {
 
 export const filterTicketsBySubject = (str) => (dispatch) => {
   dispatch(searchTicketsBySubject(str));
+};
+
+export const filterTicketsByOwner = (str) => (dispatch) => {
+  dispatch(searchTicketsByOwner(str));
+};
+
+export const filterTicketsById = (str) => (dispatch) => {
+  dispatch(searchTicketsById(str));
 };
 
 export const fetchSingleTicket = (_id) => async (dispatch) => {

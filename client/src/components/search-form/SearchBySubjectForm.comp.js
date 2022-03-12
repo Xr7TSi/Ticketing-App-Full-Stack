@@ -3,7 +3,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { filterTicketsBySubject } from "../../pages/manage-tickets/ticketsAction";
 
-export const SearchForm = () => {
+export const SearchBySubjectForm = () => {
   const dispatch = useDispatch();
 
   const handleOnChange = (e) => {

@@ -37,6 +37,24 @@ const ticketListSlice = createSlice({
         return row.subject.toLowerCase().includes(action.payload.toLowerCase());
       });
     },
+
+    // row._id need to be relpaced with owner data
+    searchTicketsByOwner: (state, action) => {
+      state.searchTicketList = state.tickets.filter((row) => {
+        if (!action.payload) return row;
+
+        return row._id.toLowerCase().includes(action.payload.toLowerCase());
+      });
+    },
+
+    searchTicketsById: (state, action) => {
+      state.searchTicketList = state.tickets.filter((row) => {
+        if (!action.payload) return row;
+
+        return row._id.toLowerCase().includes(action.payload.toLowerCase());
+      });
+    },
+
     fetchSingleTicketLoading: (state) => {
       state.isLoading = true;
     },
@@ -87,6 +105,8 @@ export const {
   fetchTicketFailure,
   resetReplyMsg,
   searchTicketsBySubject,
+  searchTicketsByOwner,
+  searchTicketsById,
   fetchSingleTicketLoading,
   fetchSingleTicketSuccess,
   fetchSingleTicketFailure,

@@ -38,9 +38,6 @@ export const OpenTickets = () => {
             <SearchBySubjectForm />
           </Col>
           <Col className="text-right">
-            <SearchByOwnerForm />
-          </Col>
-          <Col className="text-right">
             <SearchByIdForm />
           </Col>
         </Row>

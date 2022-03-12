@@ -38,14 +38,14 @@ const ticketListSlice = createSlice({
       });
     },
 
-    // row._id need to be relpaced with owner data
-    searchTicketsByOwner: (state, action) => {
-      state.searchTicketList = state.tickets.filter((row) => {
-        if (!action.payload) return row;
+    // row._id need to be replaced with owner data
+    // searchTicketsByOwner: (state, action) => {
+    //   state.searchTicketList = state.tickets.filter((row) => {
+    //     if (!action.payload) return row;
 
-        return row._id.toLowerCase().includes(action.payload.toLowerCase());
-      });
-    },
+    //     return row.conversations.sender.toLowerCase().includes(action.payload.toLowerCase());
+    //   });
+    // },
 
     searchTicketsById: (state, action) => {
       state.searchTicketList = state.tickets.filter((row) => {

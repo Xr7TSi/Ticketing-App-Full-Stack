@@ -26,7 +26,8 @@ const {
 const { deleteJWT } = require("../helpers/redis.helper");
 
 //  reminder: update root url to a value in .env
-const verificationURL = "http://localhost:3000/verification/";
+// const verificationURL = "http://localhost:3000/verification/";
+const verificationURL = "https://jonathanrein.com/verification/";
 
 
 // consider removing router.all.  may not serve a purpose

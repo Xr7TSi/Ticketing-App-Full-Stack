@@ -3,8 +3,8 @@ Deploy process for AWS ECT using NGINX, Certbot and Forever:
 
 Important notes:
 
-- Redis may need to be started manually.  This command causes redis to persist after connecti is dropped: 
-    -Start Redis as a server: sudo systemctl start redis
+- Redis may need to be started manually.  This command causes redis to persist after connection is dropped: 
+    -Start Redis as a service: sudo systemctl start redis
     -Stop Redis: sudo systemctl stop redis
     -Check if redis is running.  Should reply pong: redis-cli ping
 
@@ -44,10 +44,10 @@ Important notes:
 
     Stop Forever:
     
-        Check which Forecer processes are running:   sudo forever list
+        Check which Forecer processes are running:   
         Stop the process:  sudo forever stop 0  (where 0 is the first process)
  
-    Note:  If you're getting an erro that port 5000 is in use after making chages, here's the command to manuall shut down the port:
+    Note:  If you're getting an error that port 5000 is in use after making chages, here's the command to manuall shut down the port:
     sudo fuser -k 5000/tcp
 
 

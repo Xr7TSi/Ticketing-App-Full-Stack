@@ -5,6 +5,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { SearchBySubjectForm } from "../../components/search-form/SearchBySubjectForm.comp";
+import { SearchByIdForm } from "../../components/search-form/SearchByIdForm.comp";
 import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 
@@ -34,6 +35,9 @@ export const ClosedTickets = () => {
           </Col>
           <Col className="text-right">
             <SearchBySubjectForm />
+          </Col>
+          <Col className="text-right">
+            <SearchByIdForm />
           </Col>
         </Row>
         <hr />

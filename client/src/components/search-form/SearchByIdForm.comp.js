@@ -15,10 +15,10 @@ export const SearchByIdForm = () => {
     <div>
       <Form>
         <Form.Group as={Row}>
-          <Form.Label column sm="3">
+          <Form.Label column sm="5">
             Search By Ticket ID:{""}
           </Form.Label>
-          <Col sm="9">
+          <Col sm="7">
             <Form.Control
               name="searchStr"
               type="text"

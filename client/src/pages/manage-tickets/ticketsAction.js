@@ -88,7 +88,7 @@ export const fetchAllClosedTickets = () => async (dispatch) => {
 };
 
 
-export const filterSearchedTickets = (str) => (dispatch) => {
+export const filterTicketsBySubject = (str) => (dispatch) => {
   dispatch(searchTicketsBySubject(str));
 };
 

@@ -1,14 +1,14 @@
 import React from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { filterSearchedTickets } from "../../pages/manage-tickets/ticketsAction";
+import { filterTicketsBySubject } from "../../pages/manage-tickets/ticketsAction";
 
 export const SearchForm = () => {
   const dispatch = useDispatch();
 
   const handleOnChange = (e) => {
     const { value } = e.target;
-    dispatch(filterSearchedTickets(value));
+    dispatch(filterTicketsBySubject(value));
   };
 
   return (

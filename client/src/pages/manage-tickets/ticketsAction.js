@@ -2,7 +2,7 @@ import {
   fetchTicketLoading,
   fetchTicketSuccess,
   fetchTicketFailure,
-  searchTickets,
+  searchTicketsBySubject,
   fetchSingleTicketLoading,
   fetchSingleTicketSuccess,
   fetchSingleTicketFailure,
@@ -89,7 +89,7 @@ export const fetchAllClosedTickets = () => async (dispatch) => {
 
 
 export const filterSearchedTickets = (str) => (dispatch) => {
-  dispatch(searchTickets(str));
+  dispatch(searchTicketsBySubject(str));
 };
 
 export const fetchSingleTicket = (_id) => async (dispatch) => {

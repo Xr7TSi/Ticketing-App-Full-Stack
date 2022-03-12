@@ -30,14 +30,13 @@ const ticketListSlice = createSlice({
       state.isLoading = false;
       state.replyMsg = "";
     },
-    searchTickets: (state, action) => {
+    searchTicketsBySubject: (state, action) => {
       state.searchTicketList = state.tickets.filter((row) => {
         if (!action.payload) return row;
 
         return row.subject.toLowerCase().includes(action.payload.toLowerCase());
       });
     },
-
     fetchSingleTicketLoading: (state) => {
       state.isLoading = true;
     },
@@ -87,7 +86,7 @@ export const {
   fetchTicketSuccess,
   fetchTicketFailure,
   resetReplyMsg,
-  searchTickets,
+  searchTicketsBySubject,
   fetchSingleTicketLoading,
   fetchSingleTicketSuccess,
   fetchSingleTicketFailure,

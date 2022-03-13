@@ -5,7 +5,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { SearchBySubjectForm } from "../../components/search-form/SearchBySubjectForm.comp";
-import { SearchByOwnerForm } from "../../components/search-form/SearchByOwnerForm.comp";
+// import { SearchByOwnerForm } from "../../components/search-form/SearchByOwnerForm.comp";
 import { SearchByIdForm } from "../../components/search-form/SearchByIdForm.comp";
 import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import DefaultLayout from "../../components/layout/DefaultLayout";

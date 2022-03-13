@@ -16,7 +16,6 @@ const initialState = {
   phone: "",
   email: "",
   company: "",
-  address: "",
   password: "",
   confirmPassword: "",
 };
@@ -103,62 +102,65 @@ const RegistrationForm = () => {
       <Row>
         <Col>
           <Form onSubmit={handleOnSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Full Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                value={newUser.name}
-                onChange={handleOnChange}
-                placeholder="Your Name"
-              />
-            </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Phone Number</Form.Label>
-              <Form.Control
-                type="phoneNumber"
-                name="phone"
-                value={newUser.phone}
-                onChange={handleOnChange}
-                placeholder="Phone Number"
-              />
-            </Form.Group>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3">
+                  <Form.Label>Full Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    value={newUser.name}
+                    onChange={handleOnChange}
+                    placeholder="Your Name"
+                  />
+                </Form.Group>
+              </Col>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                type="email"
-                name="email"
-                value={newUser.email}
-                onChange={handleOnChange}
-                placeholder="Enter Email"
-              />
-            </Form.Group>
+              <Col>
+                <Form.Group className="mb-3">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control
+                    type="phoneNumber"
+                    name="phone"
+                    value={newUser.phone}
+                    onChange={handleOnChange}
+                    placeholder="Phone Number"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Company Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="company"
-                value={newUser.company}
-                onChange={handleOnChange}
-                placeholder="Company Name"
-              />
-            </Form.Group>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3">
+                  <Form.Label>Email Address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    value={newUser.email}
+                    onChange={handleOnChange}
+                    placeholder="Enter Email"
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3">
+                  <Form.Label>Company Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="company"
+                    value={newUser.company}
+                    onChange={handleOnChange}
+                    placeholder="Company Name"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                type="text"
-                name="address"
-                value={newUser.address}
-                onChange={handleOnChange}
-                placeholder="Address"
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
+            <Row>
+              <Col>
+              <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -168,8 +170,9 @@ const RegistrationForm = () => {
                 placeholder="Password"
               />
             </Form.Group>
-
-            <Form.Group className="mb-3">
+              </Col>
+              <Col>
+              <Form.Group className="mb-3">
               <Form.Label>Confirm Password</Form.Label>
               <Form.Control
                 type="password"
@@ -179,59 +182,66 @@ const RegistrationForm = () => {
                 placeholder="Confirm Password"
               />
             </Form.Group>
+              </Col>
+            </Row>
 
-            <ul className="mb-4">
+            
+            <div className="mb-2">
               {/* ternary operators to determine className applied to text */}
-              <li
+              <div className="mb-2 text-center">Password Requirements:</div>
+              <div className="text-center">
+              <div
                 className={
                   passwordError.isLongEnough ? "text-success" : "text-danger"
                 }
               >
                 At least 8 characters {""}
                 {passwordError.isLongEnough ? <>&#10003;</> : ""}
-              </li>
-              <li
+              </div>
+              <div
                 className={
                   passwordError.hasUpperCase ? "text-success" : "text-danger"
                 }
               >
                 At least one upper case letter {""}
                 {passwordError.hasUpperCase ? <>&#10003;</> : ""}
-              </li>
-              <li
+              </div>
+              <div
                 className={
                   passwordError.hasLowerCase ? "text-success" : "text-danger"
                 }
               >
                 At least one lower case letter {""}
                 {passwordError.hasLowerCase ? <>&#10003;</> : ""}
-              </li>
-              <li
+              </div>
+              <div
                 className={
                   passwordError.hasNumber ? "text-success" : "text-danger"
                 }
               >
                 At least one number {""}
                 {passwordError.hasNumber ? <>&#10003;</> : ""}
-              </li>
-              <li
+              </div>
+              <div
                 className={
                   passwordError.hasSpecial ? "text-success" : "text-danger"
                 }
               >
                 At least one special character {""}
                 {passwordError.hasSpecial ? <>&#10003;</> : ""}
-              </li>
+              </div>
 
-              <li
+              <div
                 className={
                   passwordError.confirmPassword ? "text-success" : "text-danger"
                 }
               >
                 Passwords match {""}
                 {passwordError.confirmPassword ? <>&#10003;</> : ""}
-              </li>
-            </ul>
+              </div>
+            </div>
+              </div>
+          
             <div className="text-center">
               <Button
                 variant="info"
@@ -246,6 +256,7 @@ const RegistrationForm = () => {
           </Form>
         </Col>
       </Row>
+
       <Row className="py-3 text-center">
         <Col>
           Already have an account? {""}

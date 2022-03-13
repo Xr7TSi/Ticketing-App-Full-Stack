@@ -29,6 +29,20 @@ const passwordVerificationError = {
   confirmPassword: false,
 };
 
+const styles = {
+  jumbotron: {
+    backgroundColor: "white",
+    // defines size of area around text
+    paddingTop: "4rem",
+    paddingBottom: "4rem",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+    // rounds the edges
+    borderRadius: "0.5rem",
+    boxShadow: "0px 0px 15px -7px black",
+  }
+};
+
 const RegistrationForm = () => {
   const dispatch = useDispatch();
   const [newUser, setNewUser] = useState(initialState);
@@ -83,7 +97,7 @@ const RegistrationForm = () => {
   
 
   return (
-    <Container>
+    <Container style={styles.jumbotron}>
       <Row>
         <Col>
           <h1 className="text-info">User Registration</h1>

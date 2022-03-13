@@ -80,6 +80,8 @@ const RegistrationForm = () => {
     dispatch(newUserRegistration(newUser));
   };
 
+  
+
   return (
     <Container>
       <Row>

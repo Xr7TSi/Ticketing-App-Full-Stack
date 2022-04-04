@@ -11,6 +11,7 @@ import {
 import { newUserRegistration } from "./userRegistrationAction";
 import { useDispatch, useSelector } from "react-redux";
 
+
 const initialState = {
   name: "",
   phone: "",
@@ -29,19 +30,7 @@ const passwordVerificationError = {
   confirmPassword: false,
 };
 
-const styles = {
-  jumbotron: {
-    backgroundColor: "white",
-    // defines size of area around text
-    paddingTop: "4rem",
-    paddingBottom: "4rem",
-    paddingLeft: "2rem",
-    paddingRight: "2rem",
-    // rounds the edges
-    borderRadius: "0.5rem",
-    boxShadow: "0px 0px 15px -7px black",
-  }
-};
+
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -97,7 +86,7 @@ const RegistrationForm = () => {
   
 
   return (
-    <Container style={styles.jumbotron}>
+    <Container>
       <Row>
         <Col>
           <h1 className="text-info">User Registration</h1>

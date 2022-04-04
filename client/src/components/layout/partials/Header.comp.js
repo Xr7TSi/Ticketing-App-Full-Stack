@@ -1,11 +1,9 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import crmLogo from "../../../assets/img/crmLogo2.png";
 import { Link } from "react-router-dom";
 
-
 const styles = {
-  crmLogo: {
+  logo: {
     marginLeft: "8px",
     paddingTop: ".5rem",
     paddingBottom: ".5rem",
@@ -31,13 +29,17 @@ export const Header = () => {
 
   return (
     <Navbar collapseOnSelect bg="info" variant="dark" expand="md">
-      <Navbar.Brand style={styles.crmLogo}>
-        <img src={crmLogo} alt="CRM Logo" width="50px" />
+      <Navbar.Brand style={styles.logo}>
+        <h2>Ticket Tracker</h2>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav>
-          <Link to="/dashboard" style={styles.linkStyle} onClick="window.location.reload">
+        <Nav style={styles.linkPosition}>
+          <Link
+            to="/dashboard"
+            style={styles.linkStyle}
+            onClick="window.location.reload"
+          >
             Dashboard
           </Link>
 
@@ -52,7 +54,7 @@ export const Header = () => {
           <Link to="/closed-tickets" style={styles.linkStyle}>
             Closed Tickets
           </Link>
-          
+
           <Link to="/" onClick={logMeOut} style={styles.linkStyle}>
             Logout
           </Link>

@@ -1,4 +1,4 @@
 /sanbox
-.env
+
 
 #clear git cache = git rm -rf --cached .

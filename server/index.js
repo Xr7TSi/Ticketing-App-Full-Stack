@@ -1,4 +1,8 @@
-require("dotenv").config();
+// use .env file outside root directory.
+require("dotenv").config({ path: "../../environment-variables/Ticketing-App/.env" });
+
+// to use .env file in root directory
+// require("dotenv").config();
 
 // Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications
 const express = require("express");

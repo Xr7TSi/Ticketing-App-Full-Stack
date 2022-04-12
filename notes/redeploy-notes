@@ -1,0 +1,30 @@
+Re-deploy process
+
+*Run npm build and commit latest build
+
+Stop Redis: sudo systemctl stop redis
+
+Stop Forever:
+    
+    Check which Forever processes are running: sudo forever list 
+    Stop the process:  sudo forever stop 0  (where 0 is the first process)
+ 
+Shut down port 5000: sudo fuser -k 5000/tcp
+
+Delete application code from aws: sudo rm -r Ticketing-App-Full-Stack
+
+Clone new application code: sudo git clone https://github.com/Xr7TSi/Ticketing-App-Full-Stack.git
+
+Install Server Dependencies: sudo npm install
+
+Set environment variables in the following files:
+
+    server/index.js
+    server/src/helpers/email.helper.js
+    server/src/helpers/jwt.helper.js
+
+Restart Nginx: sudo service nginx restart
+
+Restart Redis as a service: sudo systemctl start redis
+
+Restart Back End: sudo forever index.js &

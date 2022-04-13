@@ -26,7 +26,7 @@ const ticketListSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
-    resetReplyMsg: (state, action) => {
+    resetReplyMsg: (state) => {
       state.isLoading = false;
       state.replyMsg = "";
     },

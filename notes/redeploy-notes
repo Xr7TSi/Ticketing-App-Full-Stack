@@ -19,6 +19,8 @@ Install Server Dependencies: sudo npm install
 
 Set environment variables in the following files:
 
+    *use sudo vi editor.  Shift i to inset.  Esc :wq exit and save.  Esc :q! to exit w/p save.
+
     server/index.js
     server/src/helpers/email.helper.js
     server/src/helpers/jwt.helper.js

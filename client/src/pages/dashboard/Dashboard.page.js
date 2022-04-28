@@ -36,7 +36,7 @@ export const Dashboard = () => {
           <Col className="text-center mt-5 mb-2">
             <Link to="/add-ticket">
               <Button
-                variant="info"
+                variant="primary"
                 style={{
                   fontSize: "2rem",
                   padding: "10px 30px",

@@ -11,7 +11,7 @@ It's currently deployed on an Amazon Web Services Ubuntu instance.
 
 #### [Link to deployed application](https://jonathanrein.com/)
 
-![CRM image](/assets/Ticketing-App-350x219.png)
+![CRM image](/assets/Ticketing-App-350x219-New-Colors.png)
 
 
 &nbsp;

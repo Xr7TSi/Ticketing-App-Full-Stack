@@ -89,7 +89,7 @@ const RegistrationForm = () => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info">User Registration</h1>
+          <h1 className="text-primary">User Registration</h1>
         </Col>
       </Row>
       <hr />
@@ -249,7 +249,7 @@ const RegistrationForm = () => {
           
             <div className="text-center">
               <Button
-                variant="info"
+                variant="primary"
                 type="submit"
                 disabled={Object.values(passwordError).includes(false)}
               >
@@ -257,7 +257,7 @@ const RegistrationForm = () => {
               </Button>
             </div>
 
-            {isLoading && <Spinner animation="border" variant="info" />}
+            {isLoading && <Spinner animation="border" variant="primary" />}
           </Form>
         </Col>
       </Row>

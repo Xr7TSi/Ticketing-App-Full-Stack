@@ -28,7 +28,7 @@ export const Header = () => {
   };
 
   return (
-    <Navbar collapseOnSelect bg="info" variant="dark" expand="md">
+    <Navbar collapseOnSelect bg="dark" variant="dark" expand="md">
       <Navbar.Brand style={styles.logo}>
         <h2>Ticket Tracker</h2>
       </Navbar.Brand>

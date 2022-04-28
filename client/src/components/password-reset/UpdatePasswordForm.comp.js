@@ -87,7 +87,7 @@ const UpdatePasswordForm = () => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info">Password Update</h1>
+          <h1 className="text-primary">Password Update</h1>
         </Col>
       </Row>
       <hr />
@@ -99,7 +99,7 @@ const UpdatePasswordForm = () => {
               {message}
             </Alert>
           )}
-          {isLoading && <Spinner variant="info" animation="border" />}
+          {isLoading && <Spinner variant="primary" animation="border" />}
         </Col>
       </Row>
 
@@ -193,7 +193,7 @@ const UpdatePasswordForm = () => {
             </ul>
             <div className="text-center">
               <Button
-                variant="info"
+                variant="primary"
                 type="submit"
                 disabled={Object.values(passwordError).includes(false)}
               >

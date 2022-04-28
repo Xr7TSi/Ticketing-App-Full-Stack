@@ -32,7 +32,7 @@ export const ResetPassword = () => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info">Reset Password</h1>
+          <h1 className="text-primary">Reset Password</h1>
           {/* hr/ creates horizontal line */}
           <hr />
           {message && (
@@ -40,7 +40,7 @@ export const ResetPassword = () => {
               {message}
             </Alert>
           )}
-          {isLoading && <Spinner variant="info" animation="border" />}
+          {isLoading && <Spinner variant="primary" animation="border" />}
           <Form autoComplete="off" onSubmit={handleOnResetSubmit}>
             <Form.Group>
               <Form.Label>Email address</Form.Label>

@@ -22,7 +22,7 @@ export const PasswordOtpForm = () => {
   const { showUpdatePasswordForm } = useSelector((state) => state.password);
 
   return (
-    <div className="entry-page bg-info">
+    <div className="entry-page bg-dark">
       <div style={styles.jumbotron}>
         {showUpdatePasswordForm ? <UpdatePasswordForm /> : <ResetPassword />}
       </div>

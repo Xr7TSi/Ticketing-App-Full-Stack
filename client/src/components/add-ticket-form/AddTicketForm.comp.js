@@ -81,12 +81,12 @@ export const AddTicketForm = () => {
 
   return (
     <div style={styles.jumbotron}>
-      <h1 className="text-info text-center">Add a New Ticket</h1>
+      <h1 className="text-primary text-center">Add a New Ticket</h1>
       <hr />
       <div>
         {error && <Alert variant="danger">{error}</Alert>}
-        {successMsg && <Alert variant="info">{successMsg}</Alert>}
-        {isLoading && <Spinner variant="info" animation="border" />}
+        {successMsg && <Alert variant="primary">{successMsg}</Alert>}
+        {isLoading && <Spinner variant="primary" animation="border" />}
       </div>
       <Form autoComplete="off" onSubmit={handleOnSubmit}>
         <Form.Group as={Row}>
@@ -145,7 +145,7 @@ export const AddTicketForm = () => {
         <Button
           style={{ marginTop: "18px", color: "white", width: "100%" }}
           type="submit"
-          variant="info"
+          variant="primary"
         >
           Submit
         </Button>

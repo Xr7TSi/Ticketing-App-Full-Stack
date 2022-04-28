@@ -18,7 +18,7 @@ const styles = {
 
 
 export const Registration = () => {
-  return  <div className="registration-page bg-info">
+  return  <div className="registration-page bg-dark">
   <div style={styles.jumbotron}>
    <RegistrationForm />
   </div>

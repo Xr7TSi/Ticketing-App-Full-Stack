@@ -32,7 +32,7 @@ export const Entry = () => {
 
   if (frmLoad === "login") {
     return (
-      <div className="entry-page bg-info">
+      <div className="entry-page bg-dark">
         <div style={styles.jumbotron}>
           <LoginForm
             formSwitcher={formSwitcher}
@@ -44,7 +44,7 @@ export const Entry = () => {
 
   if (frmLoad === "reset") {
     return (
-      <div className="entry-page bg-info">
+      <div className="entry-page bg-dark">
         <div style={styles.jumbotron}>
           <ResetPassword
             // handleOnChange={handleOnChange}

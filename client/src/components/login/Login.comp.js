@@ -70,7 +70,7 @@ export const LoginForm = ({ formSwitcher }) => {
     <Container>
       <Row>
         <Col>
-          <h1 className="text-info">Login</h1>
+          <h1 className="text-primary">Login</h1>
           {/* hr/ creates horizontal line */}
           <hr />
           {error && <Alert variant="danger">{error}</Alert>}
@@ -105,7 +105,7 @@ export const LoginForm = ({ formSwitcher }) => {
             </Button>
             </div>
             
-            {isLoading && <Spinner variant="info" animation="border" />}
+            {isLoading && <Spinner variant="primary" animation="border" />}
           </Form>
           <hr />
         </Col>

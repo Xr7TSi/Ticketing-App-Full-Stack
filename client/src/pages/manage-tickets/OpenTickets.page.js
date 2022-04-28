@@ -29,7 +29,7 @@ export const OpenTickets = () => {
         <Row className="mt-4">
           <Col>
             <Link to="/add-ticket">
-              <Button variant="info" style={{ color: "white" }}>
+              <Button variant="primary" style={{ color: "white" }}>
                 Add New Ticket
               </Button>
             </Link>

@@ -1,4 +1,4 @@
 /node_modules
-/notes
+
 
 #clear git cache = git rm -rf --cached .
